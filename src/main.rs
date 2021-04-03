@@ -18,20 +18,6 @@ struct Board {
 
 impl Board {
     #[allow(dead_code)]
-    fn empty_row() -> [PlaceValue;3] {
-        [PlaceValue::E, PlaceValue::E, PlaceValue::E]
-    }
-
-    #[allow(dead_code)]
-    fn new() -> Board {
-        Board {
-            row1: Board::empty_row(),
-            row2: Board::empty_row(),
-            row3: Board::empty_row(),
-        }
-    }
-
-    #[allow(dead_code)]
     fn from(positions: [PlaceValue;9]) -> Board {
         Board {
             row1: [positions[0], positions[1], positions[2]],
